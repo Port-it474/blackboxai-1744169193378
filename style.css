@@ -1,0 +1,46 @@
+/* Custom styles to complement Tailwind */
+.swiggy-orange {
+    background-color: #fc8019;
+}
+
+.swiggy-orange-text {
+    color: #fc8019;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.food-category {
+    transition: all 0.3s ease;
+}
+
+.food-category:hover {
+    transform: scale(1.05);
+}
+
+.search-box:focus-within {
+    box-shadow: 0 0 0 2px rgba(252, 128, 25, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
