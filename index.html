@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Swiggy Replica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-orange-500 text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-utensils text-orange-500 text-xl"></i>
+                </div>
+                <div class="relative">
+                    <span class="text-sm font-medium">Delivery to</span>
+                    <div class="flex items-center cursor-pointer">
+                        <span class="font-bold">Current Location</span>
+                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="font-medium hover:text-orange-200">Search</a>
+                <a href="#" class="font-medium hover:text-orange-200">Offers</a>
+                <a href="#" class="font-medium hover:text-orange-200">Help</a>
+                <a href="#" class="font-medium hover:text-orange-200">Sign In</a>
+                <a href="#" class="font-medium hover:text-orange-200">Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl font-bold text-center mb-6">Order food from favourite restaurants near you</h1>
+                <div class="bg-white rounded-lg shadow-md p-4 flex">
+                    <input type="text" placeholder="Enter your delivery location" class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <button class="bg-orange-500 text-white px-6 py-2 rounded-r-lg font-medium hover:bg-orange-600 transition">Find Food</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Categories -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-xl font-bold mb-6">What's on your mind?</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Category Items -->
+                <div class="bg-white rounded-lg shadow-sm p-4 text-center cursor-pointer hover:shadow-md transition">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0iI2VlZSI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2Ii8+PHRleHQgeD0iNTAlIiB5PSI1NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UGl6emE8L3RleHQ+PC9zdmc+" alt="Pizza" class="w-24 h-24 mx-auto mb-2">
+                    <span class="text-sm font-medium">Pizza</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-4 text-center cursor-pointer hover:shadow-md transition food-category">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0iI2VlZSI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2Ii8+PHRleHQgeD0iNTAlIiB5PSI1NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QnVyZ2VyPC90ZXh0Pjwvc3ZnPg==" alt="Burger" class="w-24 h-24 mx-auto mb-2">
+                    <span class="text-sm font-medium">Burgers</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-4 text-center cursor-pointer hover:shadow-md transition food-category">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0iI2VlZSI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2Ii8+PHRleHQgeD0iNTAlIiB5PSI1NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QmlyeWFuaTwvdGV4dD48L3N2Zz4=" alt="Biryani" class="w-24 h-24 mx-auto mb-2">
+                    <span class="text-sm font-medium">Biryani</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-4 text-center cursor-pointer hover:shadow-md transition food-category">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0iI2VlZSI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2Ii8+PHRleHQgeD0iNTAlIiB5PSI1NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FrZTwvdGV4dD48L3N2Zz4=" alt="Cake" class="w-24 h-24 mx-auto mb-2">
+                    <span class="text-sm font-medium">Cakes</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-4 text-center cursor-pointer hover:shadow-md transition food-category">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0iI2VlZSI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2Ii8+PHRleHQgeD0iNTAlIiB5PSI1NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2hpbmVzZTwvdGV4dD48L3N2Zz4=" alt="Chinese" class="w-24 h-24 mx-auto mb-2">
+                    <span class="text-sm font-medium">Chinese</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-4 text-center cursor-pointer hover:shadow-md transition food-category">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0iI2VlZSI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2Ii8+PHRleHQgeD0iNTAlIiB5PSI1NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SWNlIENyZWFtPC90ZXh0Pjwvc3ZnPg==" alt="Ice Cream" class="w-24 h-24 mx-auto mb-2">
+                    <span class="text-sm font-medium">Ice Cream</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Listings -->
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-xl font-bold mb-6">Top restaurants near you</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Restaurant Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDggMzIwIiBmaWxsPSIjZWVlIj48cmVjdCB3aWR0aD0iNTA4IiBoZWlnaHQ9IjMyMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlJlc3RhdXJhbnQgMTwvdGV4dD48L3N2Zz4=" alt="Restaurant" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Restaurant Name</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-500 text-white text-xs px-1 py-0.5 rounded flex items-center">
+                                <i class="fas fa-star mr-1 text-xs"></i> 4.2
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">• 25 mins</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-2">North Indian, Chinese</p>
+                        <p class="text-gray-500 text-sm">₹200 for one</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition restaurant-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDggMzIwIiBmaWxsPSIjZWVlIj48cmVjdCB3aWR0aD0iNTA4IiBoZWlnaHQ9IjMyMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlJlc3RhdXJhbnQgMjwvdGV4dD48L3N2Zz4=" alt="Restaurant" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Burger King</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-500 text-white text-xs px-1 py-0.5 rounded flex items-center">
+                                <i class="fas fa-star mr-1 text-xs"></i> 4.1
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">• 30 mins</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-2">Burgers, American</p>
+                        <p class="text-gray-500 text-sm">₹150 for one</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition restaurant-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDggMzIwIiBmaWxsPSIjZWVlIj48cmVjdCB3aWR0aD0iNTA4IiBoZWlnaHQ9IjMyMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlJlc3RhdXJhbnQgMzwvdGV4dD48L3N2Zz4=" alt="Restaurant" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Domino's Pizza</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-500 text-white text-xs px-1 py-0.5 rounded flex items-center">
+                                <i class="fas fa-star mr-1 text-xs"></i> 4.3
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">• 25 mins</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-2">Pizzas, Italian</p>
+                        <p class="text-gray-500 text-sm">₹200 for one</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition restaurant-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDggMzIwIiBmaWxsPSIjZWVlIj48cmVjdCB3aWR0aD0iNTA4IiBoZWlnaHQ9IjMyMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlJlc3RhdXJhbnQgNDwvdGV4dD48L3N2Zz4=" alt="Restaurant" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Haldiram's</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-500 text-white text-xs px-1 py-0.5 rounded flex items-center">
+                                <i class="fas fa-star mr-1 text-xs"></i> 4.0
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">• 35 mins</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-2">North Indian, Sweets</p>
+                        <p class="text-gray-500 text-sm">₹250 for one</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">COMPANY</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- More footer sections would go here -->
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-utensils text-orange-500 text-xl mr-2"></i>
+                    <span class="font-bold">Swiggy Replica</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
